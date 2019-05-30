@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab6_video"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="496.5" Width="677">
+    <Grid Margin="0,10,2,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="389*"/>
+            <ColumnDefinition Width="258*"/>
+        </Grid.ColumnDefinitions>
+        <MediaElement x:Name="wind" HorizontalAlignment="Left" Height="318" Margin="40,34,0,0" VerticalAlignment="Top" Width="508" Grid.ColumnSpan="2"/>
+        <Slider x:Name="slide" HorizontalAlignment="Left" Height="32" Margin="40,356,0,0" VerticalAlignment="Top" Width="508" Grid.ColumnSpan="2"/>
+        <Slider x:Name="volume" HorizontalAlignment="Left" Height="42" Margin="127,154,-44,0" VerticalAlignment="Top" Width="183" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="184,283,0,0" TextWrapping="Wrap" Text="Volume" VerticalAlignment="Top" Width="47"/>
+        <Button x:Name="stop" Content="Stop" HorizontalAlignment="Left" Height="44" Margin="0,400,0,-6" VerticalAlignment="Top" Width="74" Grid.Column="1" Click="stop_Click"/>
+        <Button x:Name="play" Content="Play" HorizontalAlignment="Left" Height="44" Margin="114,400,0,-6" VerticalAlignment="Top" Width="74" Click="play_Click"/>
+        <Button x:Name="pause" Content="Pause" HorizontalAlignment="Left" Height="44" Margin="251,400,0,-6" VerticalAlignment="Top" Width="74" Click="pause_Click"/>
+        <Button x:Name="add" Content="Add" Grid.Column="1" HorizontalAlignment="Left" Height="63" Margin="170,375,0,0" VerticalAlignment="Top" Width="84" Click="add_Click"/>
+        <Label x:Name="head" Content="" HorizontalAlignment="Left" Height="25" Margin="264,370,0,0" VerticalAlignment="Top" Width="137"/>
+
     </Grid>
 </Window>
